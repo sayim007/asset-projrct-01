@@ -4,3 +4,49 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/* assets/all.css */
+
+/* Custom styling for the logo/brand name */
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Style for main navigation links */
+.navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+/* Ensure images inside cards don't stretch and maintain aspect ratio */
+.card-img-top {
+    height: 200px; /* Uniform height for all card images */
+    object-fit: contain; /* Ensures image fits without being cropped */
+    background-color: white; /* Clean background for product images */
+}
+
+/* Custom shadow effect for cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+}
+
+/* Style the text in the footer */
+footer a:hover {
+    color: var(--bs-warning) !important; /* Use Bootstrap warning color for hover */
+}
+
+/* Custom style for the Buy Now button in New Arrivals */
+#new-arrivals-section .btn-primary {
+    background-color: #ffc107; /* Match the primary call to action (warning color) */
+    border-color: #ffc107;
+    color: #212529; /* Dark text on button */
+}
+
+#new-arrivals-section .btn-primary:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
