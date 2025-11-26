@@ -3,18 +3,365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to our website</title>
+    <title>Welcome to MyShop</title>
+
+    <link rel="stylesheet" href="assets/all.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/fa75024f24.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* Optional: Add a smooth scroll effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Set font family for better consistency */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top shadow">
+            <div class="container">
+
+                <a class="navbar-brand fw-bold" href="#">MyShop</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainMenu">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Mobile</a></li>
+                                <li><a class="dropdown-item" href="#">Laptop</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                                <li><a class="dropdown-item" href="#">Fashion</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="#shop-section">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+                    </ul>
+
+                    <form class="d-flex me-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search products" aria-label="Search">
+                        <button class="btn btn-warning" type="submit">Search</button>
+                    </form>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="#">
+                                Cart 🛒
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    3
+                                    <span class="visually-hidden">items in cart</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
         </nav>
     </header>
+
+    <main>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="assets/media/images/bg.jpg" class="d-block w-100" alt="Big Sale 50% Off Banner">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                        <h1 class="fw-bold">Big Sale 50% Off</h1>
+                        <p>Latest gadgets at best price</p>
+                        <a href="#shop-section" class="btn btn-warning px-4">Shop Now</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="assets/media/images/Cute-anime-cat-wallpaper-displaying-fun-interactions-among-feline-friends.jpg" class="d-block w-100" alt="New Arrivals Banner">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                        <h1 class="fw-bold">New Arrivals</h1>
+                        <p>Fresh products just for you</p>
+                        <a href="#new-arrivals-section" class="btn btn-primary px-4">Explore</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="assets/media/images/Desktop-wallpaper-anime-cat-lovers-full-of-cheerful-and-lively-cats.jpg" class="d-block w-100" alt="Fast Delivery Banner">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                        <h1 class="fw-bold">Fast Delivery</h1>
+                        <p>All over Bangladesh</p>
+                        <a href="#shop-section" class="btn btn-success px-4">Order Now</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <section class="py-5 bg-light" id="category-section">
+            <div class="container">
+
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Shop by Category</h2>
+                    <p class="text-muted">Choose your favorite category</p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card text-center shadow-sm h-100 border-0">
+                            <img src="https://via.placeholder.com/300x200/5E80F3/FFFFFF?text=Mobile" class="card-img-top p-3" alt="Mobile">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Mobiles</h5>
+                                <a href="#" class="btn btn-outline-primary btn-sm mt-2">View Products</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card text-center shadow-sm h-100 border-0">
+                            <img src="https://via.placeholder.com/300x200/F35E6D/FFFFFF?text=Laptop" class="card-img-top p-3" alt="Laptop">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Laptops</h5>
+                                <a href="#" class="btn btn-outline-primary btn-sm mt-2">View Products</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card text-center shadow-sm h-100 border-0">
+                            <img src="https://via.placeholder.com/300x200/5EF381/FFFFFF?text=Accessories" class="card-img-top p-3" alt="Accessories">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Accessories</h5>
+                                <a href="#" class="btn btn-outline-primary btn-sm mt-2">View Products</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card text-center shadow-sm h-100 border-0">
+                            <img src="https://via.placeholder.com/300x200/F3C15E/FFFFFF?text=Fashion" class="card-img-top p-3" alt="Fashion">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Fashion</h5>
+                                <a href="#" class="btn btn-outline-primary btn-sm mt-2">View Products</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="py-5" id="shop-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Featured Products</h2>
+                    <p class="text-muted">Our top selling products</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://via.placeholder.com/300x250/5E80F3/FFFFFF?text=Smart+Watch" class="card-img-top p-3">
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-semibold">Smart Watch</h6>
+                                <p class="text-success fw-bold fs-5">৳ 2,500</p>
+                                <a href="#" class="btn btn-dark btn-sm">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://via.placeholder.com/300x250/F35E6D/FFFFFF?text=Gaming+Headset" class="card-img-top p-3">
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-semibold">Gaming Headset</h6>
+                                <p class="text-success fw-bold fs-5">৳ 3,200</p>
+                                <a href="#" class="btn btn-dark btn-sm">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://via.placeholder.com/300x250/5EF381/FFFFFF?text=Power+Bank" class="card-img-top p-3">
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-semibold">Power Bank</h6>
+                                <p class="text-success fw-bold fs-5">৳ 1,500</p>
+                                <a href="#" class="btn btn-dark btn-sm">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://via.placeholder.com/300x250/F3C15E/FFFFFF?text=Bluetooth+Speaker" class="card-img-top p-3">
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-semibold">Bluetooth Speaker</h6>
+                                <p class="text-success fw-bold fs-5">৳ 1,999</p>
+                                <a href="#" class="btn btn-dark btn-sm">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-dark text-white text-center">
+            <div class="container">
+                <h2 class="fw-bold mb-3">🔥 Mega Sale 50% OFF</h2>
+                <p class="lead">Limited time offer. Don't miss out on the best deals!</p>
+                <a href="#shop-section" class="btn btn-warning btn-lg px-5 mt-3">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light" id="new-arrivals-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">New Arrivals</h2>
+                    <p class="text-muted">Latest products just for you</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://via.placeholder.com/300x250/F35E6D/FFFFFF?text=Wireless+Earbuds" class="card-img-top p-3">
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-semibold">Wireless Earbuds</h6>
+                                <p class="text-success fw-bold fs-5">৳ 1,800</p>
+                                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://via.placeholder.com/300x250/5E80F3/FFFFFF?text=Mechanical+Keyboard" class="card-img-top p-3">
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-semibold">Mechanical Keyboard</h6>
+                                <p class="text-success fw-bold fs-5">৳ 4,500</p>
+                                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="py-5" id="about-section">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-5">Why Choose Us</h2>
+
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <i class="fas fa-truck fa-3x text-primary mb-3"></i>
+                        <h5 class="fw-semibold">Fast Delivery</h5>
+                        <p class="text-muted">Quick delivery all over Bangladesh</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                        <h5 class="fw-semibold">Secure Payment</h5>
+                        <p class="text-muted">100% safe and secure transactions</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fas fa-exchange-alt fa-3x text-primary mb-3"></i>
+                        <h5 class="fw-semibold">Easy Return</h5>
+                        <p class="text-muted">7 days hassle-free return policy</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                        <h5 class="fw-semibold">24/7 Support</h5>
+                        <p class="text-muted">Dedicated support team always with you</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-primary text-white text-center">
+            <div class="container">
+                <h2 class="fw-bold">Subscribe to Our Newsletter</h2>
+                <p>Get the latest offers & exclusive updates delivered to your inbox.</p>
+
+                <form class="row justify-content-center mt-4">
+                    <div class="col-lg-5 col-md-6">
+                        <input type="email" class="form-control form-control-lg" placeholder="Enter your email" aria-label="Enter your email" required>
+                    </div>
+                    <div class="col-lg-2 col-md-3 mt-3 mt-md-0">
+                        <button class="btn btn-dark btn-lg w-100" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        </main>
+
+    <footer class="bg-dark text-white py-5" id="contact-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">MyShop</h5>
+                    <p class="text-muted">Your trusted online shop for the latest gadgets and accessories.</p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#shop-section" class="text-white text-decoration-none">Shop</a></li>
+                        <li><a href="#about-section" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#contact-section" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p><i class="fas fa-phone-alt me-2"></i>Phone: 01643-126130</p>
+                    <p><i class="fas fa-envelope me-2"></i>Email: support@myshop.com</p>
+                    <div class="fs-4 mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="text-secondary">
+            <p class="text-center mb-0 text-muted">© 2025 MyShop. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 </html>
