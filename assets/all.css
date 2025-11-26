@@ -7,7 +7,7 @@
 
 
 
-/* Custom styling for the logo/brand name */
+/* styling for the logo name */
 .navbar-brand {
     font-size: 1.5rem;
     letter-spacing: 1px;
@@ -18,11 +18,11 @@
     font-weight: 500;
 }
 
-/* Ensure images inside cards don't stretch and maintain aspect ratio */
+/* Custom styles for product cards */
 .card-img-top {
-    height: 200px; /* Uniform height for all card images */
-    object-fit: contain; /* Ensures image fits without being cropped */
-    background-color: white; /* Clean background for product images */
+    height: 200px; 
+    object-fit: contain; 
+    background-color: white; 
 }
 
 /* Custom shadow effect for cards */
@@ -31,20 +31,20 @@
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Lift card slightly on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
 }
 
 /* Style the text in the footer */
 footer a:hover {
-    color: var(--bs-warning) !important; /* Use Bootstrap warning color for hover */
+    color: var(--bs-warning) !important; 
 }
 
-/* Custom style for the Buy Now button in New Arrivals */
+/* style for the Buy Now button in New Arrivals */
 #new-arrivals-section .btn-primary {
-    background-color: #ffc107; /* Match the primary call to action (warning color) */
+    background-color: #ffc107; 
     border-color: #ffc107;
-    color: #212529; /* Dark text on button */
+    color: #212529; 
 }
 
 #new-arrivals-section .btn-primary:hover {
