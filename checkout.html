@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - NexTech Horizon</title>
+    <link rel="shortcut icon" href="assets/media/images/logo.jpg" type="image/x-icon">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/fa75024f24.js" crossorigin="anonymous"></script>
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
+        .checkout-container { max-width: 1200px; }
+        .order-summary, .shipping-form, .payment-options {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        .order-item-list { max-height: 400px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+
+    <header class="bg-dark text-white py-3 shadow-sm">
+        <div class="container">
+            <h3 class="fw-bold"><a href="index.html" class="text-white text-decoration-none">NexTech Horizon Checkout</a></h3>
+        </div>
+    </header>
+
+    <main class="container py-5 checkout-container">
+        <h2 class="mb-4 fw-bold">Secure Checkout</h2>
+        
+        <form id="checkoutForm" class="row g-4">
+            
+            <div class="col-lg-7">
+                <div class="shipping-form">
+                    <h4 class="mb-3 text-primary">Shipping Information</h4>
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email (Optional)</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                    </div>
+
+                    <h5 class="mb-3 mt-4">Delivery Address</h5>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="address" class="form-label">Street Address / Village</label>
+                            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="city" class="form-label">City / District</label>
+                            <input type="text" class="form-control" id="city" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="area" class="form-label">Area / Thana</label>
+                            <input type="text" class="form-control" id="area" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                
+                <div class="order-summary mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3 text-primary">
+                        Your Cart
+                        <span class="badge bg-primary rounded-pill" id="cartCountBadge">0</span>
+                    </h4>
+                    
+                    <ul class="list-group mb-3 order-item-list" id="orderItemsList">
+                        </ul>
+
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Subtotal (৳)</span>
+                            <strong id="subtotal">৳ 0.00</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Shipping Cost (৳)</span>
+                            <strong id="shippingCost">৳ 100.00</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between bg-light fw-bold">
+                            <span>Total (BDT)</span>
+                            <strong id="totalAmount" class="text-success">৳ 100.00</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="payment-options">
+                    <h4 class="mb-3 text-primary">Payment Method</h4>
+                    
+                    <div class="form-check">
+                        <input id="cod" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                        <label class="form-check-label" for="cod">Cash on Delivery (COD)</label>
+                        <div class="text-muted small">Pay when you receive the product.</div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <button class="w-100 btn btn-warning btn-lg fw-bold" type="submit" id="placeOrderButton">
+                        <i class="fas fa-shopping-bag me-2"></i> Place Order
+                    </button>
+                    
+                    <div id="orderConfirmation" class="alert alert-success mt-4 d-none" role="alert">
+                        <h4 class="alert-heading">Order Placed Successfully!</h4>
+                        <p>Thank you for shopping with us. Your order confirmation details will be sent to your phone/email shortly.</p>
+                        <hr>
+                        <a href="index.html" class="alert-link">Continue Shopping</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <script src="assets/js/checkout.js"></script> 
+    <script src="assets/all.js"></script>
+
+</body>
+</html>
